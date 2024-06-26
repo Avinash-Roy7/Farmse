@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS */
+        /* You can add your own custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        header {
+          background-color: #258773;
+          color: white;
+          text-align: center;
+          padding: 20px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            background-color: #258773;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .btn-logout {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+        }
+
+        .btn-logout:hover {
+            background-color: #c82333;
+            color: white;
+        }
+
+        .btn-settings {
+            background-color: #17a2b8;
+            color: white;
+            border: none;
+        }
+
+        .btn-settings:hover {
+            background-color: #138496;
+            color: white;
+        }
+
+        .btn-edit-profile {
+            background-color: #ffc107;
+            color: black;
+            border: none;
+        }
+
+        .btn-edit-profile:hover {
+            background-color: #e0a800;
+            color: black;
+        }
+
+        .btn-save-profile {
+            background-color: #28a745;
+            color: white;
+            border: none;
+        }
+
+        .btn-save-profile:hover {
+            background-color: #218838;
+            color: white;
+        }
+         /* Footer Styles */
+         footer {
+            background-color: #cbe1a6;
+            color: #3985be;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        footer ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        footer ul li a {
+            color: #3985be;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: #b3c7ed;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-success text-white py-4">
+        <div class="container">
+          <h1>Buyer Dashboard</h1>
+        </div>
+      </header>
+      <br>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        Profile
+                        <button class="btn btn-sm btn-edit-profile ml-2">Edit</button>
+                        <button class="btn btn-sm btn-save-profile ml-2" style="display: none;">Save</button>
+                    </div>
+                    <div class="card-body">
+                        <!-- Profile content goes here -->
+                        <form id="profileForm" class="needs-validation" novalidate>
+                            <div class="form-group">
+                                <label for="name">Company Name</label>
+                                <input type="text" class="form-control" id="name" name="name" value="ABC Enterprises" required disabled>
+                                <div class="invalid-feedback">
+                                    Please enter your Company name.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" value="abcentrp@example.com" required disabled>
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" name="address" value="123 Main St, City, Country" required disabled>
+                                <div class="invalid-feedback">
+                                    Please enter your address.
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        Order History
+                    </div>
+                    <div class="card-body">
+                        <!-- Order history content goes here -->
+                        <p>No orders yet.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        Payment History
+                    </div>
+                    <div class="card-body">
+                        <!-- Payment history content goes here -->
+                        <p>No payments yet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        Actions
+                    </div>
+                    <div class="card-body">
+                        <!-- Action buttons -->
+                        <button class="btn btn-block btn-settings mb-2">Settings</button>
+                        <button class="btn btn-block btn-logout">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+        <p>&copy; 2024 AgriPortal. All rights reserved.</p>
+    </div>
+</footer>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript code for handling actions
+        $(document).ready(function () {
+            // Logout button click event
+            $('.btn-logout').click(function () {
+                // Implement logout functionality here
+                // For example, redirect to logout page or clear session
+                alert('Logged out successfully.');
+            });
+
+            // Edit profile button click event
+            $('.btn-edit-profile').click(function () {
+                // Enable profile fields for editing
+                $('#profileForm input').prop('disabled', false);
+                // Show save button and hide edit button
+                $('.btn-save-profile').show();
+                $(this).hide();
+            });
+
+            // Save profile button click event
+            $('.btn-save-profile').click(function () {
+                // Validate profile form
+                if ($('#profileForm')[0].checkValidity()) {
+                    // Disable profile fields
+                    $('#profileForm input').prop('disabled', true);
+                    // Hide save button and show edit button
+                    $('.btn-edit-profile').show();
+                    $(this).hide();
+                    // Implement save profile functionality here
+                    // For example, send AJAX request to update profile on server
+                    alert('Profile saved successfully.');
+                } else {
+                    // If form is invalid, prevent default form submission
+                    event.preventDefault();
+                    event.stopPropagation();
+                    // Mark invalid fields
+                    $('#profileForm').addClass('was-validated');
+                }
+            });
+
+            // Settings button click event
+            $('.btn-settings').click(function () {
+                // Implement settings functionality here
+                alert('Settings clicked. Implement your settings logic here.');
+            });
+        });
+    </script>
+</body>
+
+</html>

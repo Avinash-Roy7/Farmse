@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: white;
+        }
+        header {
+            background-color: #a2c183;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 700px;
+            margin: 20px auto;
+            background-color: #e2f2cb;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        footer {
+            background-color: #cbe1a6;
+            color: #3985be;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Buyer Registration</h1>
+    </header>
+    <div class="container">
+        <form action="#" method="post">
+            <div class="form-group required">
+                <label for="buyerType">Buyer Type:</label>
+                <select id="buyerType" name="buyerType" class="form-control" required>
+                    <option value="">Select Buyer Type</option>
+                    <option value="company">Company</option>
+                    <option value="proprietorship">Proprietorship</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" name="companyName" class="form-control" placeholder="ABC Farms Pvt. Ltd." required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="form-control" required placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required placeholder="Farmer@123">
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" class="form-control" required placeholder="Farmer@123">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Example: xyz@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="gstNumber">GST Number:</label>
+                <input type="text" id="gstNumber" name="gstNumber" class="form-control" placeholder="Example: 12ABCDE3456F7GH" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" class="form-control" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" class="form-control" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="zip">ZIP Code:</label>
+                <input type="number" id="zip" name="zip" class="form-control" placeholder="Example: 10001" required>
+            </div>
+            <div class="form-group">
+                <label for="productType">Needed Product Type:</label>
+                <select id="productType" name="productType[]" multiple class="form-control" required>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="grains">Grains</option>
+                    <option value="dairy">Dairy Products</option>
+                    <option value="meat">Meat</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register" class="btn btn-primary">
+                <input type="reset" value="Clear" class="btn btn-secondary">
+            </div>
+        </form>
+    </div>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+            <p>&copy; 2024 AgriPortal. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
